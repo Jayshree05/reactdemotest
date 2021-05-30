@@ -11,6 +11,7 @@ const Second = ({ navigation }) => {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
+          
           <Text
             style={{
               fontSize: 25,

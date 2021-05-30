@@ -15,37 +15,37 @@ import 'react-native-gesture-handler';
 
 //  ******* Screen navigation *******
 
-// const Stack = createStackNavigator();
-// function screen1({navigation}) {
-//   const onPressHandler = () => {
-//     navigation.navigate('screen2');
-//   };
-//   return (
-//     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-//       <Text>screen 1</Text>
-//       <TouchableOpacity onPress={onPressHandler}>
-//         <Text style={{fontSize:18}}>Goto next screen</Text>
-//       </TouchableOpacity>
-//     </View>
-//   );
-// } 
-// function screen2() {
-//   return (
-//     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-//       <Text>screen 2</Text>
-//     </View>
-//   );
-// }
-// export default function App() {
-//   return (
-//     <NavigationContainer>
-//       <Stack.Navigator initialRouteName="Home">
-//         <Stack.Screen name="Home" component={screen1} />
-//         <Stack.Screen name="screen2" component={screen2} />
-//       </Stack.Navigator>
-//     </NavigationContainer>
-//   );
-// }
+const Stack = createStackNavigator();
+function screen1({navigation}) {
+  const onPressHandler = () => {
+    navigation.navigate('screen2');
+  };
+  return (
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <Text>screen 1</Text>
+      <TouchableOpacity onPress={onPressHandler}>
+        <Text style={{fontSize:18}}>Goto next screen</Text>
+      </TouchableOpacity>
+    </View>
+  );
+} 
+function screen2() {
+  return (
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <Text>screen 2</Text>
+    </View>
+  );
+}
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={screen1} />
+        <Stack.Screen name="screen2" component={screen2} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
 
 
 
